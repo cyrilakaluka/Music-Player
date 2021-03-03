@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Script -->
+    <script defer type="module" src="./js/App.js"></script>
+    <title>Music Player</title>
+  </head>
+  <body>
+    <div class="background" id="background"></div>
+    <button id="open-settings" class="button button--settings"><i class="fas fa-cog"></i></button>
+    <div id="settings-window" class="settings">
+      <div class="setting setting--pattern">
+        <span>Pattern</span>
+        <div id="pattern-toggle" class="toggle-wrapper">
+          <input
+            name="pattern-toggle"
+            id="pattern-toggle-1"
+            type="radio"
+            class="main-toggle-1"
+            value="disabled"
+            hidden
+            checked
+          />
+          <input name="pattern-toggle" id="pattern-toggle-2" type="radio" class="main-toggle-2" value="random" hidden />
+          <input
+            name="pattern-toggle"
+            id="pattern-toggle-3"
+            type="radio"
+            class="main-toggle-3"
+            value="enabled"
+            hidden
+          />
+          <span class="toggle toggle--3-state">
+            <label for="pattern-toggle-1" class="state-toggle state-toggle--1"></label>
+            <label for="pattern-toggle-2" class="state-toggle state-toggle--2"></label>
+            <label for="pattern-toggle-3" class="state-toggle state-toggle--3"></label>
+            <span class="toggle__ball"></span>
+          </span>
+          <span class="toggle-label"></span>
+        </div>
+        <div id="patterns" class="patterns">
+          <button id="patterns-slide-left" class="button patterns__button">
+            <i class="icon fas fa-arrow-left"></i>
+          </button>
+          <div class="patterns__frame">
+            <div class="patterns__list">
+              <span class="pattern" data-pattern="brick-wall" data-size="42px 42px">Brick Wall</span>
+              <span class="pattern" data-pattern="circuit-board" data-size="304px 304px">Circuit Board</span>
+              <span class="pattern" data-pattern="death-star" data-size="80px 106px">Death Star</span>
+              <span class="pattern" data-pattern="floating-cogs" data-size="360px 360px">Floating Cogs</span>
+              <span class="pattern" data-pattern="jigsaw" data-size="192px 192px">Jigsaw</span>
+              <span class="pattern" data-pattern="pie-factory" data-size="60px 60px">Pie Factory</span>
+            </div>
+          </div>
+          <button id="patterns-slide-right" class="button patterns__button">
+            <i class="icon fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+      <div class="setting setting--accent">
+        <span>Accent</span>
+        <div id="accent-toggle" class="toggle-wrapper">
+          <input
+            name="accent-toggle"
+            id="accent-toggle-1"
+            type="radio"
+            class="main-toggle-1"
+            value="disabled"
+            hidden
+            checked
+          />
+          <input name="accent-toggle" id="accent-toggle-2" type="radio" class="main-toggle-2" value="random" hidden />
+          <input name="accent-toggle" id="accent-toggle-3" type="radio" class="main-toggle-3" value="enabled" hidden />
+          <span class="toggle toggle--3-state">
+            <label for="accent-toggle-1" class="state-toggle state-toggle--1"></label>
+            <label for="accent-toggle-2" class="state-toggle state-toggle--2"></label>
+            <label for="accent-toggle-3" class="state-toggle state-toggle--3"></label>
+            <span class="toggle__ball"></span>
+          </span>
+          <span class="toggle-label"></span>
+        </div>
+        <div id="accent-selection" class="accents">
+          <label for="bg-none" class="accent">
+            <input id="bg-none" type="radio" name="accent" value="none" hidden />
+            <span></span>
+          </label>
+          <label for="bg-red" class="accent">
+            <input id="bg-red" type="radio" name="accent" value="red" hidden />
+            <span></span>
+          </label>
+          <label for="bg-pink" class="accent">
+            <input id="bg-pink" type="radio" name="accent" value="pink" hidden />
+            <span></span>
+          </label>
+          <label for="bg-purple" class="accent">
+            <input id="bg-purple" type="radio" name="accent" value="purple" hidden />
+            <span></span>
+          </label>
+          <label for="bg-deep-purple" class="accent">
+            <input id="bg-deep-purple" type="radio" name="accent" value="deep-purple" hidden />
+            <span></span>
+          </label>
+          <label for="bg-indigo" class="accent">
+            <input id="bg-indigo" type="radio" name="accent" value="indigo" hidden />
+            <span></span>
+          </label>
+          <label for="bg-blue" class="accent">
+            <input id="bg-blue" type="radio" name="accent" value="blue" hidden />
+            <span></span>
+          </label>
+          <label for="bg-light-blue" class="accent">
+            <input id="bg-light-blue" type="radio" name="accent" value="light-blue" hidden />
+            <span></span>
+          </label>
+          <label for="bg-cyan" class="accent">
+            <input id="bg-cyan" type="radio" name="accent" value="cyan" hidden />
+            <span></span>
+          </label>
+          <label for="bg-teal" class="accent">
+            <input id="bg-teal" type="radio" name="accent" value="teal" hidden />
+            <span></span>
+          </label>
+          <label for="bg-green" class="accent">
+            <input id="bg-green" type="radio" name="accent" value="green" hidden />
+            <span></span>
+          </label>
+          <label for="bg-lime" class="accent">
+            <input id="bg-lime" type="radio" name="accent" value="lime" hidden />
+            <span></span>
+          </label>
+          <label for="bg-yellow" class="accent">
+            <input id="bg-yellow" type="radio" name="accent" value="yellow" hidden />
+            <span></span>
+          </label>
+          <label for="bg-amber" class="accent">
+            <input id="bg-amber" type="radio" name="accent" value="amber" hidden />
+            <span></span>
+          </label>
+          <label for="bg-orange" class="accent">
+            <input id="bg-orange" type="radio" name="accent" value="orange" hidden />
+            <span></span>
+          </label>
+          <label for="bg-deep-orange" class="accent">
+            <input id="bg-deep-orange" type="radio" name="accent" value="deep-orange" hidden />
+            <span></span>
+          </label>
+        </div>
+      </div>
+      <div class="setting setting--bg-accent">
+        <span>Background Accent</span>
+        <div class="toggle-wrapper">
+          <input type="checkbox" id="bg-accent-toggle" class="main-toggle" hidden />
+          <label for="bg-accent-toggle" class="toggle">
+            <span class="toggle__ball"></span>
+          </label>
+          <span class="toggle-label"></span>
+        </div>
+      </div>
+      <div class="setting setting--theme">
+        <span>Theme</span>
+        <div class="toggle-wrapper">
+          <input type="checkbox" id="theme-toggle" class="main-toggle" hidden />
+          <label for="theme-toggle" class="toggle">
+            <span class="toggle__ball"></span>
+          </label>
+          <span class="toggle-label"></span>
+        </div>
+      </div>
+      <button class="button settings__close" id="close-settings"><i class="icon fas fa-times"></i></button>
+    </div>
+    <div class="player">
+      <div class="details">
+        <div class="track-art" id="track-art"><span class="track-art__frame"></span></div>
+        <strong class="track-name" id="track-name">Low Life</strong>
+        <small class="track-artist" id="track-artist">Future ft. The Weekend</small>
+      </div>
+      <div class="controls">
+        <div class="control control--timing">
+          <div class="track-timing">
+            <span id="current-time">1:17</span>
+            <span id="total-duration">2:48</span>
+          </div>
+          <div id="track-slider" class="slider slider--track"><span class="slider__ball"></span></div>
+        </div>
+        <div class="control control--volume">
+          <button id="mute" class="button button--volume"><i class="icon fas fa-volume-mute"></i></button>
+          <span id="volume-slider" class="slider slider--volume"><span class="slider__ball"></span></span>
+          <span class="volume-level" id="volume-level">50</span>
+        </div>
+        <div class="control control--state">
+          <button class="button button--direction" id="backward"><i class="icon fas fa-backward"></i></button>
+          <button class="button button--play-pause" id="play-pause"><i class="icon fas fa-play"></i></button>
+          <button class="button button--direction" id="forward"><i class="icon fas fa-forward"></i></button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
