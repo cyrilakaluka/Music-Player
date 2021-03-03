@@ -6,7 +6,7 @@ export default class Player {
     this.config = db.getPlayerConfig();
     this.audio = new Audio();
     this.controller = new Controller(this.audio, this._getTrackList());
-    this.controller.adjustVolume(this.config.volume);
+    this.controller.adjustVolume(this.config.volume || 50);
   }
 
   initialize() {
@@ -111,7 +111,7 @@ export default class Player {
       max: 100,
       round: false,
       roundOnDisplay: true,
-      initValue: this.config.volume || 40,
+      initValue: this.config.volume || 50,
       notifyStart: null,
       notifyRealtime: this._onVolumeAdjustment,
       notifyEnd: this._onVolumeAdjustment,
