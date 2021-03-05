@@ -3,7 +3,7 @@ A simple music player designed with the outlook of a mobile UI for Desktop.
 
 ### Demo
 Check it out on github, click the following link -
-[Music Player Demo](cyrilakaluka.github.io/Music-Player)
+[Music Player Demo](http://cyrilakaluka.github.io/Music-Player)
 
 ## Design Inspiration
 * [Simple Music Player, Light Mode](https://dribbble.com/shots/9517002--Light-Mode-Simple-Music-Player) *by Filip Leigieski* - Dribble.
